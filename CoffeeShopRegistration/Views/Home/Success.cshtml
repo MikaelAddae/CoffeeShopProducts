@@ -1,0 +1,19 @@
+﻿@model User
+@*
+
+*@
+@{
+
+}
+
+<h1>Welcome @Model.FirstName @Model.LastName</h1>
+<p>you always will have @Model.Favorite to drink</p>
+
+@{
+    if(Model.Forever)
+    {
+        <h3>Thank you for joining the forever club</h3>
+        <p>Like a timeshare, this membership will outlive you</p>
+        <p>Your kids and grandkids will be so grateful that you signed them up to pay for non-tangible coffee forever!!!</p>
+    }
+}

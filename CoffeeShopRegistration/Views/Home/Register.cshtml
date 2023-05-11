@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Register Now";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-method="post" asp-action="Success">
+    <p>Please enter your first name</p>
+    <input type="text" name="FirstName" required/>
+
+    <p>Please enter your last name</p>
+    <input type="text" name="LastName" required />
+    <br />
+    <p>Please enter an email address</p>
+    <input type="email" name="Email" required />
+    <br />
+    <p>Please choose a password</p>
+    <input type="password" name="Password"
+        title="At least 1 Uppercase
+At least 1 Lowercase
+At least 1 Number
+At least 1 Symbol, symbol allowed --> !@@#$%^&*_=+-
+Min 8 chars and Max 12 chars"
+        required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@@#$%^&*_=+-]).{8,12}$"/>
+
+    <p><br /></p>
+    <p>I would not not not not not not like to be a part of the forever club</p>
+    <input type="checkbox" name="Forever" value="true" />
+    <p><br /></p>
+    <p>What is the most we could charge you every month?</p>
+    <input type="radio" id="cheap" name="price" value="cheap">
+    <label for="cheap">55.95 a month</label><br>
+    <input type="radio" id="middle" name="price" value="middle">
+    <label for="middle">$110.99 per month</label><br>
+    <input type="radio" id="professional" name="price" value="professional" checked>
+    <label for="senior">$599 per month. Unlimited virtual coffees. *Recommended</label>
+
+    <p> What is your favorite coffee</p>
+    <select name="Favorite">
+        <option value="Black">Black Coffee</option>
+        <option>Caramel Latte</option>
+        <option>Ice Capp</option>
+        <option> Empty Cup</option>
+    </select>
+
+    <!--This button submits the collected info -->
+    <input type="submit" />
+</form>
